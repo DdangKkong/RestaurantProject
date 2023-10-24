@@ -9,6 +9,6 @@ import javax.sql.DataSource;
 
 @Repository
 public interface JpaDataRepository extends JpaRepository<Data, Integer> {
-
+                                                        //<Entity, Entity의 id타입>
 
 }
