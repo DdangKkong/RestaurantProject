@@ -24,8 +24,8 @@ public class User {
 
     private String password;
 
-    private String partnerName;
+    private String userName;
 
-    private String phone;
+    private String userPhone;
 
 }
