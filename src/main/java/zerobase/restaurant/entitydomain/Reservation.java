@@ -1,4 +1,4 @@
-package zerobase.restaurant.domain;
+package zerobase.restaurant.entitydomain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,10 +27,11 @@ public class Reservation {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Integer userNum; // 예약 인원수
-
 //    @JsonSerialize(using = LocalDateTimeSerializer.class)
 //    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime reservationWhen; // 예약 일시
+
+    private Integer userNum; // 예약 인원수
+
 
 }

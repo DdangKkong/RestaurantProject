@@ -1,4 +1,4 @@
-package zerobase.restaurant.domain;
+package zerobase.restaurant.entitydomain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,12 +13,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "data")
-public class Data {
+@Entity(name = "partner")
+public class Partner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String text;
+    private Long id;
+
+    private String email;
+
+    private String password;
+
+    private String partnerName;
+
+    private String phone;
 
 }

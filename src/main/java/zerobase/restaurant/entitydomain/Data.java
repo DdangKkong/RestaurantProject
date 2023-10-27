@@ -1,4 +1,4 @@
-package zerobase.restaurant.domain;
+package zerobase.restaurant.entitydomain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,19 +13,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "user")
-public class User {
+@Entity(name = "data")
+public class Data {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // mySQL에서 id 생성 및 자동증가
-    private Long id;
-
-    private String email;
-
-    private String password;
-
-    private String userName;
-
-    private String userPhone;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String text;
 
 }

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import zerobase.restaurant.domain.Data;
+import zerobase.restaurant.entitydomain.Data;
 import zerobase.restaurant.repository.JpaDataRepository;
 
 import java.util.List;

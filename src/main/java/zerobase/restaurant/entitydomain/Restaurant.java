@@ -1,4 +1,4 @@
-package zerobase.restaurant.domain;
+package zerobase.restaurant.entitydomain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

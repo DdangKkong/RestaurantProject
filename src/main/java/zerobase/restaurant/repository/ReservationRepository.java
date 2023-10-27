@@ -2,9 +2,9 @@ package zerobase.restaurant.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import zerobase.restaurant.domain.Reservation;
-import zerobase.restaurant.domain.Restaurant;
-import zerobase.restaurant.domain.User;
+import zerobase.restaurant.entitydomain.Reservation;
+import zerobase.restaurant.entitydomain.Restaurant;
+import zerobase.restaurant.entitydomain.User;
 
 import java.util.List;
 
