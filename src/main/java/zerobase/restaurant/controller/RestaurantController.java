@@ -12,9 +12,9 @@ public class RestaurantController {
 
     private final RestaurantService restaurantService;
 
-//    public RestaurantController(RestaurantService restaurantService) {
-//        this.restaurantService = restaurantService;
-//    }
+    public RestaurantController(RestaurantService restaurantService) {
+        this.restaurantService = restaurantService;
+    }
 
     @GetMapping
     public ResponseEntity<?> searchRestaurant() {

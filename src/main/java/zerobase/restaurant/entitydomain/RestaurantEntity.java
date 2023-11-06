@@ -1,17 +1,18 @@
 package zerobase.restaurant.entitydomain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "restaurant")
-public class Restaurant {
+public class RestaurantEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,6 @@ public class Restaurant {
 
     @OneToOne
     @JoinColumn(name = "partner_id")
-    private Partner partner;
+    private PartnerEntity partnerEntity;
 
 }

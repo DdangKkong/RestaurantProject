@@ -1,7 +1,7 @@
 package zerobase.restaurant.dto;
 
 import lombok.*;
-import zerobase.restaurant.entitydomain.Restaurant;
+import zerobase.restaurant.entitydomain.RestaurantEntity;
 
 @Getter
 @Setter
@@ -14,10 +14,10 @@ public class RestaurantDto {
 
     private String restaurantInfo;
 
-    public static RestaurantDto fromEntity(Restaurant restaurant){
+    public static RestaurantDto fromEntity(RestaurantEntity restaurantEntity){
         return RestaurantDto.builder()
-                .restaurantName(restaurant.getRestaurantName())
-                .restaurantInfo(restaurant.getRestaurantInfo())
+                .restaurantName(restaurantEntity.getRestaurantName())
+                .restaurantInfo(restaurantEntity.getRestaurantInfo())
                 .build();
     }
 

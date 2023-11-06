@@ -1,7 +1,7 @@
 package zerobase.restaurant.dto;
 
 import lombok.*;
-import zerobase.restaurant.entitydomain.Reservation;
+import zerobase.restaurant.entitydomain.ReservationEntity;
 
 import java.time.LocalDateTime;
 
@@ -16,16 +16,19 @@ public class ReservationDto {
 
     private LocalDateTime reservationWhen; // 예약 일시
 
+    private String userId;
+
     private String userName;
 
     private Integer userNum; // 예약 인원수
 
-    public static ReservationDto fromEntity(Reservation reservation){
+    public static ReservationDto fromEntity(ReservationEntity reservationEntity){
         return ReservationDto.builder()
-                .restaurantName(reservation.getRestaurant().getRestaurantName())
-                .reservationWhen(reservation.getReservationWhen())
-                .userName(reservation.getUser().getUserName())
-                .userNum(reservation.getUserNum())
+                .restaurantName(reservationEntity.getRestaurantEntity().getRestaurantName())
+                .reservationWhen(reservationEntity.getReservationWhen())
+                .userId(reservationEntity.getMemberEntity().getMemberId())
+                .userName(reservationEntity.getMemberEntity().getUsername())
+                .userNum(reservationEntity.getUserNum())
                 .build();
     }
 
